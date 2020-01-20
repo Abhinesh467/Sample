@@ -6,7 +6,7 @@ sap.ui.define([
 	return Controller.extend("com.numeric.BarChart.controller.View1", {
 		onInit: function () {
 //			var sampleDatajson = new sap.ui.model.json.JSONModel("model/Data.json");
-			var sampleDatajson = new sap.ui.model.json.JSONModel(jQuery.sap.getModulePath("com.numeric.SampleReport.model","/Data.json"));
+			var sampleDatajson = new sap.ui.model.json.JSONModel(jQuery.sap.getModulePath("com.numeric.BarChart.model","/Data.json"));
 			var oVizFrame = this.getView().byId("idStackedChart");
 			oVizFrame.setVizProperties({
 				plotArea: {
