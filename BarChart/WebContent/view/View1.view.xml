@@ -1,0 +1,21 @@
+<mvc:View controllerName="com.numeric.BarChart.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:viz="sap.viz.ui5.controls" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<headerContent>
+					</headerContent>
+					<content>
+						
+							
+							<viz:VizFrame xmlns="sap.viz" id="idStackedChart" vizType="bar" width="100%" ></viz:VizFrame>
+							
+						
+					
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,101 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:viz="sap.viz.ui5.controls" xmlns:form="sap.ui.layout.form"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns:layout="sap.ui.layout" xmlns:m="sap.m" controllerName="com.numeric.BarChart.controller.View2">
+	<App class="sapUiResponsiveMargin"
+width="auto">
+		<pages>
+			<Page title="Title">
+				<content>
+					<!--<l:HorizontalLayout class="sapUiContentPadding" >-->
+					<form:SimpleForm editable="true" layout="ResponsiveGridLayout" title="" labelSpanXL="1" labelSpanL="1"
+						 emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+						singleContainerFullSize="false">
+						<!--<form:content>-->
+							
+						<viz:VizFrame id="bottomVizFrame" class="sapUiLargeMargin" width="100%" vizType='dual_stacked_column' 
+							vizProperties="{dataLabel:{ showTotal: true},title:{ text:'Dual Stacked Column Example'}}" >
+							<viz:dataset>
+								<viz.data:FlattenedDataset data="{/Names}">
+									<viz.data:dimensions>
+										<viz.data:DimensionDefinition name="Store" value="{store}"/>
+									</viz.data:dimensions>
+									<viz.data:measures>
+										<viz.data:MeasureDefinition name="Year Value" value="{yearT}"/>
+										<viz.data:MeasureDefinition name="Year" value="{year}"/>
+									</viz.data:measures>
+								</viz.data:FlattenedDataset>
+							</viz:dataset>
+							<viz:feeds>
+								<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Year Value"/>
+								<viz.feeds:FeedItem id='valueAxisFeed2' uid="valueAxis2" type="Measure" values="Year"/>
+								<viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="Store"/>
+							</viz:feeds>
+						</viz:VizFrame>
+							
+						<viz:VizFrame id="bottomVizFrame1" class="sapUiLargeMargin" width="100%" vizType='dual_stacked_column' 
+							vizProperties="{dataLabel:{ showTotal: true},title:{ text:'Dual Stacked Column Example'}}" >
+							<viz:dataset>
+								<viz.data:FlattenedDataset data="{/Names}">
+									<viz.data:dimensions>
+										<viz.data:DimensionDefinition name="Store" value="{store}"/>
+									</viz.data:dimensions>
+									<viz.data:measures>
+										<viz.data:MeasureDefinition name="Year Value" value="{yearT}"/>
+										<viz.data:MeasureDefinition name="Year" value="{year}"/>
+									</viz.data:measures>
+								</viz.data:FlattenedDataset>
+							</viz:dataset>
+							<viz:feeds>
+								<viz.feeds:FeedItem id='valueAxisFeed1' uid="valueAxis" type="Measure" values="Year Value"/>
+								<viz.feeds:FeedItem id='valueAxisFeed21' uid="valueAxis2" type="Measure" values="Year"/>
+								<viz.feeds:FeedItem id='categoryAxisFeed1' uid="categoryAxis" type="Dimension" values="Store"/>
+							</viz:feeds>
+						</viz:VizFrame>
+						<!--</form:content>-->
+					</form:SimpleForm>
+					<!--</l:HorizontalLayout>-->
+					<HBox>
+					<viz:VizFrame id="bottomVizFrame3"  width="50%" vizType='dual_stacked_column' uiConfig="{applicationSet:'fiori'}"
+						vizProperties="{dataLabel:{ showTotal: true},title:{ text:'Dual Stacked Column Example'}}">
+						<viz:dataset>
+							<viz.data:FlattenedDataset data="{/Names}">
+								<viz.data:dimensions>
+									<viz.data:DimensionDefinition name="Store" value="{store}"/>
+								</viz.data:dimensions>
+								<viz.data:measures>
+									<viz.data:MeasureDefinition name="Year Value" value="{yearT}"/>
+									<viz.data:MeasureDefinition name="Year" value="{year}"/>
+								</viz.data:measures>
+							</viz.data:FlattenedDataset>
+						</viz:dataset>
+						<viz:feeds>
+							<viz.feeds:FeedItem id='valueAxisFeed3' uid="valueAxis" type="Measure" values="Year Value"/>
+							<viz.feeds:FeedItem id='valueAxisFeed23' uid="valueAxis2" type="Measure" values="Year"/>
+							<viz.feeds:FeedItem id='categoryAxisFeed3' uid="categoryAxis" type="Dimension" values="Store"/>
+						</viz:feeds>
+					</viz:VizFrame>
+					<viz:VizFrame id="bottomVizFrame4"  width="50%" vizType='dual_stacked_column' uiConfig="{applicationSet:'fiori'}"
+						vizProperties="{dataLabel:{ showTotal: true},title:{ text:'Dual Stacked Column Example'}}">
+						<viz:dataset>
+							<viz.data:FlattenedDataset data="{/Names}">
+								<viz.data:dimensions>
+									<viz.data:DimensionDefinition name="Store" value="{store}"/>
+								</viz.data:dimensions>
+								<viz.data:measures>
+									<viz.data:MeasureDefinition name="Year Value" value="{yearT}"/>
+									<viz.data:MeasureDefinition name="Year" value="{year}"/>
+								</viz.data:measures>
+							</viz.data:FlattenedDataset>
+						</viz:dataset>
+						<viz:feeds>
+							<viz.feeds:FeedItem id='valueAxisFeed4' uid="valueAxis" type="Measure" values="Year Value"/>
+							<viz.feeds:FeedItem id='valueAxisFeed24' uid="valueAxis2" type="Measure" values="Year"/>
+							<viz.feeds:FeedItem id='categoryAxisFeed4' uid="categoryAxis" type="Dimension" values="Store"/>
+						</viz:feeds>
+					</viz:VizFrame>
+					</HBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
